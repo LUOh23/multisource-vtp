@@ -1,0 +1,72 @@
+# Large data
+高程原始数据/
+*.tif
+*.vtk
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+
+# Web app (not part of paper)
+web_app/
+node_modules/
+
+# Generated figures
+output/
+论文截图/
+
+# Python
+__pycache__/
+*.pyc
+*.pyd
+*.so
+*.egg-info/
+build/
+env/
+
+# Paper drafts
+论文*.md
+文献综述.md
+*.docx
+*.vtu
+*.svg
+
+# IDE / Claude internal
+.vscode/
+.idea/
+.claude/
+
+# Misc project files
+cesium_export/
+复杂地形 VTP 测地线精度对比分析系统/
+archive_old/
+*.pdf
+*.png
+VTPfinal_text.txt
+interactive_path_planner.py
+
+# IDE
+.vscode/
+.idea/
+
+# Old temp scripts
+regenerate_fig*.py
+generate_fig*.py
+experiment1*.py
+experiment2*.py
+experiment4*.py
+quick_test.py
+benchmark_sh10.py
+check_env.py
+compare_methods.py
+compute_geodesic_field.py
+convert_shp_to_vtk.py
+diagonal_shortest_path.py
+export_for_cesium.py
+extract_shortest_path.py
+prepare_mesh_data.py
+rescue_*.py
+run_sh10.py
+step*.py
+*.txt
