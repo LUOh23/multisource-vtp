@@ -5,7 +5,7 @@
 
 Code and experiments accompanying the paper:
 
-> **罗昊, 段新桥.** 多源VTP波前互抑效应的发现与地形影响因素分析[J]. 测绘科学, 2026.
+> **罗昊, 段新桥.** 多源VTP波前互抑效应的发现与地形影响因素分析. (投稿中 / Submitted)
 
 A Cython Python wrapper for the C++ VTP (Virtual Times Parallel) exact geodesic algorithm [Qin et al., ACM TOG 2016], extended with multi-source synchronous wavefront propagation and window-counting instrumentation.
 
@@ -78,7 +78,7 @@ No external data required. Sphere meshes are generated programmatically via PyVi
 @article{luo2026multisource,
   author  = {罗昊 and 段新桥},
   title   = {多源VTP波前互抑效应的发现与地形影响因素分析},
-  journal = {测绘科学},
+  note    = {Submitted},
   year    = {2026},
 }
 ```
