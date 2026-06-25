@@ -4,9 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch
 import numpy as np
 
-plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'DejaVu Sans']
-plt.rcParams['font.family'] = 'sans-serif'
-plt.rcParams['axes.unicode_minus'] = False
+plt.rcParams['font.family'] = 'Times New Roman'
 plt.rcParams['mathtext.fontset'] = 'stix'
 
 fig, ax = plt.subplots(1, 1, figsize=(12, 5.5))
@@ -129,19 +127,22 @@ arrow(right_x, y, y-gap)
 
 y -= gap + mh
 dark_module(right_x, y, mw, mh, 'Propagate  (unchanged)', 'Wavefront: Rule 1 + Rule 2')
+ax.text(right_x, y-mh/2-0.16, 'Mutual suppression occurs here', ha='center', va='top', fontsize=7.5, fontstyle='italic', color='#CC3333', fontfamily='Times New Roman')
 arrow(right_x, y, y-gap)
 
 y -= gap + mh
 module(right_x, y, mw, mh, 'Output', 'd(v) = min_j d_g(v_sj, v)')
 
 # ═══════════ BOTTOM: Speedup ═══════════
-ax.text(6.0, 0.55, 'Speedup:  η(k) → k   (Theorem 1)',
-        ha='center', va='center', fontsize=11, fontweight='bold', color=NAVY)
-ax.text(6.0, 0.22, 'T_multi ≈ 0.032 s  (constant, independent of k)',
-        ha='center', va='center', fontsize=9, fontstyle='italic', color=TEXT_MID)
+ax.text(6.0, 0.55, r'Acceleration:  $\eta(k) \to k$  (Property 2)',
+        ha='center', va='center', fontsize=11, fontweight='bold', color=NAVY,
+        fontfamily='Times New Roman')
+ax.text(6.0, 0.22, r'$T_{\rm multi} \approx$ const  (independent of $k$)',
+        ha='center', va='center', fontsize=9, fontstyle='italic', color=TEXT_MID,
+        fontfamily='Times New Roman')
 
 plt.tight_layout(pad=0.3)
-plt.savefig('output/fig1_algorithm_flow.png', dpi=600,
+plt.savefig('e:/vtp_geodesic/论文截图/fig1_algorithm_flow.png', dpi=300,
             bbox_inches='tight', facecolor='white', edgecolor='none')
 plt.close()
 print('Fig.2 saved')

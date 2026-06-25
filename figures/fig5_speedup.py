@@ -32,7 +32,7 @@ ax.plot(k_values, eta_values, 'o-', color='#8B0000', lw=2.5, ms=10,
         label=r'$\eta(k)$ measured', zorder=5)
 
 # ── Labels above each data point ──
-offsets = [(0.5, 1.2), (0.5, 1.2), (0.5, 1.2), (0.5, 1.5), (1.0, 1.5), (1.5, 0.5)]
+offsets = [(-0.5, 0.8), (0.5, 2.0), (0.5, 1.2), (0.5, 1.5), (1.0, 1.5), (1.5, 0.5)]
 for i, (k, eta, lbl) in enumerate(zip(k_values, eta_values, labels)):
     ox, oy = offsets[i]
     ax.annotate(lbl, (k, eta), xytext=(k + ox, eta + oy),
@@ -50,7 +50,7 @@ ax.annotate(r'$\eta(50) = 50.7$' + '\n' + r'$E = 101\%$' + '\n' + r'$T_{\rm mult
             zorder=10)
 
 # ── Labels ──
-ax.set_xlabel('Number of Sources k', fontsize=12, fontweight='bold')
+ax.set_xlabel('Number of Sources', fontsize=12, fontweight='bold')
 ax.set_ylabel('Speedup Ratio ' + r'$\eta$', fontsize=12, fontweight='bold')
 ax.legend(loc='upper left', fontsize=9, framealpha=0.9, edgecolor='gray')
 
@@ -68,7 +68,7 @@ ax.text(0.98, 0.08, 'Sh10 mesh\n8,800 vertices | 17,222 faces\n$T_{\\rm clear}$ 
         bbox=dict(boxstyle='round,pad=0.4', facecolor='#F5F5F5', edgecolor='#CCCCCC', alpha=0.9))
 
 plt.tight_layout()
-plt.savefig('output/fig4_speedup.png', dpi=400,
+plt.savefig('e:/vtp_geodesic/论文截图/fig4_speedup.png', dpi=400,
             bbox_inches='tight', facecolor='white', edgecolor='none')
 plt.close()
 print('Fig 4 saved')
